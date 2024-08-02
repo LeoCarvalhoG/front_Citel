@@ -1,0 +1,78 @@
+<div class="home-container">
+  <header class="py-3 mb-4">
+    <nav class="navbar navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">BANCO DE SANGUE - CITEL</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mt-4">
+    <section>
+      <h1>Banco de Sangue!</h1>
+      <p>Dados da lista de doadores:</p>
+      <div class="row justify-content-center">
+        <div class="col-md-6" #candidatosPorEstadoContainer></div>
+      </div>
+      <div class="col-md-6">
+        <ng-container #imcMedioContainer></ng-container>
+      </div>      
+      <div class="col-md-6">
+        <ng-container #percentualObesosContainer></ng-container>
+      </div>  
+      <div class="col-md-6">
+        <ng-container #mediaIdadeTipoSanguineoContainer></ng-container>
+      </div>
+      <div class="col-md-6">
+        <ng-container #possiveisDoadoresContainer></ng-container>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 d-flex justify-content-center mb-3">
+          <button class="btn btn-primary btn-lg" (click)="carregarCandidatosPorEstado()">Candidato Por Estado</button>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center mb-3">
+          <button class="btn btn-danger btn-lg" (click)="carregarImcMedioPorIdade()">IMC Médio Por Faixa de Idade</button>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center mb-3">
+          <button class="btn btn-success btn-lg" (click)="carregarPercentualObesosPorGenero()">Percentual Obesos por Gênero</button>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center mb-3">
+          <button class="btn btn-warning btn-lg" (click)="carregarMediaIdadePorTipoSanguineo()">Média de Idade por Tipo Sanguíneo</button>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center mb-3">
+          <button class="btn btn-info btn-lg" (click)="carregarPossiveisDoadoresPorTipoSanguineo()">Possíveis Doadores por Tipo Sanguíneo</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Nosso Banco</h2>
+      <p>Confira Abaixo Nosso Software de Estatística para Doadores de Sangue:</p>
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Doadores!</h5>
+              <p class="card-text">Faça aqui o Upload do seu arquivo e nós iremos fornecer os dados dos candidatos a doadores.</p>
+              <input type="file" #fileInput accept=".json" style="display: none;" (change)="onFileSelected($event)">
+              <button class="btn btn-primary" (click)="triggerFileInputClick()">Procurar</button>
+              <button class="btn btn-success" (click)="uploadFile()">Upload</button>
+              <div *ngIf="showUploadSuccessMessage" class="alert alert-success mt-3">
+                Arquivo enviado com sucesso!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-5">
+    <div class="container text-center">
+      <p>&copy; Banco de Sangue. Todos os direitos reservados. 2024</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</div>

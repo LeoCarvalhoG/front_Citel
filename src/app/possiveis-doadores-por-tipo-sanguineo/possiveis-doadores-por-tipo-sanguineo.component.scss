@@ -1,0 +1,31 @@
+/* possiveis-doadores-por-tipo-sanguineo.component.css */
+.doadores-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .doadores-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .doadores-container h3 {
+    color: #555;
+    margin-top: 15px;
+  }
+  
+  .doadores-container ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .doadores-container li {
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  

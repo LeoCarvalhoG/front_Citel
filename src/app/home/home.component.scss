@@ -1,0 +1,59 @@
+.home-container {
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  header {
+    background-color: #dc3545;
+    color: white;
+    border-radius: 8px;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .card-title {
+    color: #dc3545;
+  }
+  
+  .btn-primary {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-secondary {
+    background-color: #f8f9fa;
+    color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .list-group-item {
+    border: none;
+    padding: 0;
+  }
+  
+  .list-group-item .btn {
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      font-size: 1.5rem;
+    }
+  
+    .card-title {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .product-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  

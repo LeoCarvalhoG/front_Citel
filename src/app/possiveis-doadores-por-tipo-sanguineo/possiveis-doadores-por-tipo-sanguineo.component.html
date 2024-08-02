@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header">
+    Possíveis Doadores por Tipo Sanguíneo
+  </div>
+  <div class="card-body">
+    <div *ngIf="possiveisDoadoresPorTipoSanguineo && possiveisDoadoresPorTipoSanguineo.length > 0; else noData">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Tipo Sanguíneo</th>
+            <th>Quantidade de Doadores</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let doador of possiveisDoadoresPorTipoSanguineo">
+            <td>{{ doador.tipoSanguineo }}</td>
+            <td>{{ doador.quantidade }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ng-template #noData>
+      <p>Nenhum dado disponível.</p>
+    </ng-template>
+  </div>
+</div>
